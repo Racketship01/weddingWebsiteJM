@@ -1,0 +1,279 @@
+@import "tailwindcss";
+@import "@nuxt/ui"; 
+
+@theme {
+  --color-primary: #AFC8DC;
+  --color-primary-50: #F3F7FB;
+  --color-primary-100: #E8F0F6;
+  --color-primary-200: #D7E5EE;
+  --color-primary-300: #BFD6E5;
+  --color-primary-400: #AFC8DC;
+  --color-primary-500: #91B5CF;
+  --color-primary-600: #7A9EBA;
+  --color-primary-700: #65859E;
+  --color-primary-800: #4E687B;
+  --color-primary-900: #384A57;
+
+  --color-powderBlue: #BFD6E5;
+  --color-powderBlue-soft: #D7E5EE;
+  --color-powderBlue-deep: #91B5CF;
+
+  --color-champagne: #D8C09A;
+  --color-champagne-light: #E8DDCC;
+  --color-champagne-dark: #C9A46A;
+
+  --color-cream: #FBF8F1;
+  --color-warmWhite: #FFFDFC;
+  --color-beige: #E8DDCC;
+  --color-gold: #C9A46A;
+  --color-text: #4A4A4A;
+  --color-text-soft: #6B6B6B;
+  --color-text-light: #8C8C8C;
+  --color-burgundy: #722F37;
+  --color-burgundy-soft: #8C4A51;
+
+  --font-family-serif-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-family-serif-body: "Cormorant Garamond", Georgia, serif;
+  --font-family-script: "Great Vibes", "Dancing Script", cursive;
+  --font-family-script-alt: "Dancing Script", cursive;
+  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --letter-spacing-wedding-wide: 0.25em;
+  --letter-spacing-wedding-wider: 0.35em;
+
+  --shadow-soft: 0 4px 20px -2px rgba(74, 74, 74, 0.08);
+  --shadow-card: 0 10px 40px -10px rgba(74, 74, 74, 0.12);
+  --shadow-floral: 0 8px 30px -4px rgba(145, 181, 207, 0.18);
+
+  --radius-wedding: 1rem;
+  --max-w-wedding: 72rem;
+}
+
+:root {
+  --wedding-primary: #AFC8DC;
+  --wedding-powder-blue: #BFD6E5;
+  --wedding-blue: #91B5CF;
+  --wedding-soft-blue: #D7E5EE;
+  --wedding-champagne: #D8C09A;
+  --wedding-cream: #FBF8F1;
+  --wedding-warm-white: #FFFDFC;
+  --wedding-beige: #E8DDCC;
+  --wedding-gold: #C9A46A;
+  --wedding-text: #4A4A4A;
+  --wedding-burgundy: #722F37;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-warmWhite text-[--wedding-text] antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  ::selection {
+    background: var(--wedding-champagne);
+    color: #FFFDFC;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[--wedding-text];
+  }
+}
+
+@layer components {
+  .ui-input,
+  .ui-textarea,
+  .ui-input-wrapper,
+  .ui-textarea-wrapper {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .ui-input input,
+  .ui-textarea textarea {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: var(--wedding-text) !important;
+    caret-color: var(--wedding-text) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .ui-input input:-webkit-autofill,
+  .ui-input input:-webkit-autofill:hover,
+  .ui-input input:-webkit-autofill:focus,
+  .ui-textarea textarea:-webkit-autofill,
+  .ui-textarea textarea:-webkit-autofill:hover,
+  .ui-textarea textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--wedding-text) !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+    background-color: transparent !important;
+    caret-color: var(--wedding-text) !important;
+  }
+
+  .ui-input input::placeholder,
+  .ui-textarea textarea::placeholder {
+    color: color-mix(in srgb, var(--wedding-text) 45%, transparent) !important;
+    opacity: 1 !important;
+  }
+
+  .rsvp-card input[type="text"],
+  .rsvp-card input[type="name"],
+  .rsvp-card input:not([type]),
+  .rsvp-card textarea,
+  .rsvp-card [data-rsvp-field] input,
+  .rsvp-card [data-rsvp-field] textarea {
+    color: #4A4A4A !important;
+    -webkit-text-fill-color: #4A4A4A !important;
+    caret-color: #4A4A4A !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .rsvp-card input::placeholder,
+  .rsvp-card textarea::placeholder {
+    color: rgba(74, 74, 74, 0.45) !important;
+    -webkit-text-fill-color: rgba(74, 74, 74, 0.45) !important;
+    opacity: 1 !important;
+  }
+
+  .rsvp-card input:-webkit-autofill,
+  .rsvp-card input:-webkit-autofill:hover,
+  .rsvp-card input:-webkit-autofill:focus,
+  .rsvp-card textarea:-webkit-autofill,
+  .rsvp-card textarea:-webkit-autofill:hover,
+  .rsvp-card textarea:-webkit-autofill:focus {
+    color: #4A4A4A !important;
+    -webkit-text-fill-color: #4A4A4A !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+    background-color: transparent !important;
+    caret-color: #4A4A4A !important;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  input[type="radio"]:checked,
+  input[type="checkbox"]:checked {
+    background-color: transparent !important;
+  }
+
+  input[type="radio"]:-webkit-autofill,
+  input[type="checkbox"]:-webkit-autofill:hover,
+  input[type="checkbox"]:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    background-color: transparent !important;
+  }
+
+  .font-serif-display {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-serif-body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Great Vibes', 'Dancing Script', cursive;
+  }
+
+  .font-script-alt {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .text-sans-small-caps {
+    @apply uppercase tracking-[0.25em] text-xs md:text-sm font-medium;
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.25em;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-6 md:px-10 lg:px-16;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .btn-wedding-primary {
+    @apply inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cream;
+    background-color: var(--wedding-champagne);
+    color: #FFFDFC;
+  }
+
+  .btn-wedding-primary:hover {
+    background-color: var(--wedding-gold);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px -5px rgba(216, 192, 154, 0.4);
+  }
+
+  .btn-wedding-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(216, 192, 154, 0.35);
+  }
+
+  .btn-wedding-outline {
+    @apply inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 border;
+    border-color: var(--wedding-champagne);
+    color: var(--wedding-gold);
+    background-color: transparent;
+  }
+
+  .btn-wedding-outline:hover {
+    background-color: var(--wedding-champagne);
+    color: #FFFDFC;
+    transform: translateY(-1px);
+  }
+
+  .card-bordered {
+    @apply bg-warmWhite rounded-xl shadow-sm;
+    border: 1px solid rgba(232, 221, 204, 0.7);
+  }
+
+  .fade-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-section {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

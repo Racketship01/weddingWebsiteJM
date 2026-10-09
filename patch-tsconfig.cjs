@@ -1,0 +1,7 @@
+const fs = require('fs')
+const path = require('path')
+const f = path.join(__dirname, '.nuxt/tsconfig.app.json')
+let s = fs.readFileSync(f, 'utf8')
+s = s.replace(/\s*"libReplacement":\s*false,?/g, '')
+fs.writeFileSync(f, s)
+console.log('Patched. Removed libReplacement from tsconfig.app.json.')
