@@ -289,8 +289,6 @@ export const entourageGroups: readonly EntourageGroup[] = [
       { name: 'Nicole M. De Luna' },
       { name: 'Eunicka Antonette D. Dy' },
       { name: 'Imelda S. Bumanlag' },
-      { name: 'Donita Rose J. Cantona' },
-      { name: 'Ida Bianca M. Flores' }
     ]
   },
   {
@@ -302,8 +300,6 @@ export const entourageGroups: readonly EntourageGroup[] = [
       { name: 'King Immanuel C. Lintag' },
       { name: 'Lee Jay M. Mendiola' },
       { name: 'Gidheon Dave M. Martin' },
-      { name: 'Jayson M. Baria' },
-      { name: 'Kelvin P. Banguis' }
     ]
   }
 ]
@@ -315,8 +311,6 @@ export const principalSponsors: PrincipalSponsors = {
     'Mr. Franchi Janus D. Ladera',
     'Mr. Bernard R. Tolentino',
     'Mr. Rizaleo C. Valeriano',
-    'Mr. Roden C. Bolos',
-    'Mr. Warlito T. Viernes'
   ],
   ninangs: [
     'Mrs. Jennifer T. Go',
@@ -324,8 +318,6 @@ export const principalSponsors: PrincipalSponsors = {
     'Mrs. Adoracion F. Zafra',
     'Mrs. Jean R. Altobano',
     'Mrs. Susana B. Balanay',
-    'Mrs. Marife A. Pato',
-    'Mrs. Luningning Hilaga'
   ]
 }
 
