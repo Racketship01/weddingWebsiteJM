@@ -207,17 +207,17 @@ export const times: Times = {
 }
 
 export const address: Address = {
-  line1: '1630 San Marcelino St. Malate',
-  city: 'Manila, Metro Manila, Philippines',
-  full: '1630 San Marcelino St. Malate Manila, Metro Manila, Philippines',
-  mapsQuery: '1630+San+Marcelino+St+Malate+Manila+Metro+Manila+Philippines'
+  line1: '1823 Quirino Avenue, Pandacan',
+  city: 'Manila, Metro Manila 1011, Philippines',
+  full: '1823 Quirino Avenue, Pandacan, Manila 1011, Philippines',
+  mapsQuery: '1823+Quirino+Avenue+Pandacan+Manila+City+Metro+Manila+1011'
 }
 
 export const venues: Venues = {
   ceremony: {
-    name: 'Iglesia Ni Cristo, Lokal ng Paco',
+    name: 'Iglesia Ni Cristo, Lokal ng Pandacan',
     time: '3:00 PM',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Iglesia+Ni+Cristo+Lokal+ng+Paco+Manila'
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Iglesia+Ni+Cristo+Lokal+ng+Pandacan+Manila'
   },
   reception: {
     name: 'Manila Events Place',
@@ -239,7 +239,7 @@ export const timelineEvents: readonly TimelineEvent[] = [
     id: 2,
     title: 'Wedding Ceremony',
     time: '3:00 PM',
-    description: 'Iglesia Ni Cristo – Lokal ng Paco'
+    description: 'Iglesia Ni Cristo – Lokal ng Pandacan'
   },
   {
     id: 3,
@@ -451,9 +451,9 @@ export const weddingInfo: WeddingInfo = {
     text: 'We cannot wait to celebrate this beautiful beginning with you.',
     eventLabel: 'NOVEMBER 27, 2026 · MANILA CITY',
     links: [
-      { label: 'Facebook', href: 'https://facebook.com' },
-      { label: 'Email', href: 'mailto:wedding@example.com' },
-      { label: 'Website', href: '#' }
+      { label: 'Facebook', href: 'https://www.facebook.com/mariel.shien.adap.morales' },
+      { label: 'Email', href: 'mailto:rsvpjuliusyeng@gmail.com' },
+      
     ],
     copyright: '© 2026 Julius & Mariel'
   },
@@ -461,7 +461,7 @@ export const weddingInfo: WeddingInfo = {
   seo: {
     title: 'Julius & Mariel · November 27, 2026',
     description:
-      'You are invited to the wedding of Julius and Mariel on Friday, November 27, 2026, in Paco, Manila City. Join us as we say our vows and celebrate our forever.'
+      'You are invited to the wedding of Julius and Mariel on Friday, November 27, 2026, in Pandacan, Manila City. Join us as we say our vows and celebrate our forever.'
   }
 }
 
